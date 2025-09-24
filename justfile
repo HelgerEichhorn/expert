@@ -91,6 +91,10 @@ compile-ci-matrix:
 [unix]
 install: release-local
   #!/usr/bin/env bash
+  set -euxo pipefail
+
+  mkdir -p ~/.local/bin
   cp ./apps/expert/burrito_out/expert_{{ local_target }} ~/.local/bin/expert
+  chmod +x ~/.local/bin/expert
 
 default: release-local
