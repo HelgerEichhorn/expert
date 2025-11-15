@@ -113,4 +113,7 @@ install: release-local
   cp ./apps/expert/burrito_out/expert_{{ local_target }} ~/.local/bin/expert
   chmod +x ~/.local/bin/expert
 
+clean-engine:
+  elixir -e ':filename.basedir(:user_data, "Expert") |> File.rm_rf!() |> IO.inspect()'
+
 default: release-local
