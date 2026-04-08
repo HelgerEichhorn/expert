@@ -27,7 +27,7 @@ jobs:
           - forge
     steps:
       # Step: Setup Elixir + Erlang image as the base
-      - uses: extractions/setup-just@v3
+      - uses: extractions/setup-just@v4
       - uses: erlef/setup-beam@v1
         with:
           otp-version: ${{ env.DEFAULT_OTP }}
@@ -74,7 +74,7 @@ jobs:
           - expert_credo
           - forge
     steps:
-      - uses: extractions/setup-just@v3
+      - uses: extractions/setup-just@v4
       - name: Set up Elixir
         uses: erlef/setup-beam@v1
         with:
@@ -148,7 +148,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - uses: extractions/setup-just@v3
+      - uses: extractions/setup-just@v4
       - name: Set up Elixir
         uses: erlef/setup-beam@v1
         with:
@@ -195,7 +195,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - uses: extractions/setup-just@v3
+      - uses: extractions/setup-just@v4
       - name: Set up Elixir
         uses: erlef/setup-beam@v1
         with:
