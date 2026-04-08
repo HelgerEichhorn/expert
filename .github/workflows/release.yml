@@ -37,7 +37,7 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: extractions/setup-just@v3
+      - uses: extractions/setup-just@v4
       - uses: erlef/setup-beam@v1
         with:
           otp-version: "27.3.4.1"
